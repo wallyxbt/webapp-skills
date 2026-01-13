@@ -1,5 +1,7 @@
 # Solana Fullstack Web App Skills
 
+![Solana Fullstack Web App Skills](skills-image.png)
+
 A comprehensive collection of Claude Code skills for building modern Solana fullstack web applications. These skills provide opinionated guidance, best practices, and reusable patterns for the entire Solana development stack.
 
 ## What's Included
@@ -69,7 +71,7 @@ cp -r .claude /path/to/your/project/
 Or clone this repo and copy what you need:
 
 ```bash
-git clone https://github.com/yourusername/solana-fullstack-webapp-skills.git
+git clone https://github.com/0xGF/solana-fullstack-webapp-skills.git
 cp -r solana-fullstack-webapp-skills/.claude /path/to/your/project/
 ```
 
