@@ -60,6 +60,24 @@ A comprehensive collection of Claude Code skills for building modern Solana full
 | `/simplify` | Run code simplifier agent |
 | `/clean` | Clean build artifacts |
 
+## Getting Started
+
+### Project Kickoff Questionnaire
+
+Starting a new project? Use the **[PROJECT_KICKOFF.md](PROJECT_KICKOFF.md)** questionnaire to help Claude understand what you're building. It covers:
+
+- Project type and target users
+- Solana program requirements (Anchor vs Pinocchio)
+- Frontend stack (Next.js, Tailwind, UI components)
+- Authentication and wallet connection
+- Database and API architecture
+- Deployment and infrastructure
+
+**Quick start prompt:**
+```
+I want to build a new Solana web app. Please ask me the project kickoff questions to understand what I'm building, then help me set up the project structure.
+```
+
 ## Installation
 
 Copy the `.claude` folder to your project root:
