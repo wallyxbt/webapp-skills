@@ -1,25 +1,8 @@
-# Solana Fullstack Web App Skills
+# Fullstack Web App Skills
 
-![Solana Fullstack Web App Skills](skills-image.png)
-
-A comprehensive collection of Claude Code skills for building modern Solana fullstack web applications. These skills provide opinionated guidance, best practices, and reusable patterns for the entire Solana development stack.
+A comprehensive collection of Claude Code skills for building modern fullstack web applications. These skills provide opinionated guidance, best practices, and reusable patterns for the entire development stack.
 
 ## What's Included
-
-### Solana Development Skills
-
-| Skill | Description |
-|-------|-------------|
-| `solana.md` | Main Solana playbook - framework-kit first approach, modern SDK patterns |
-| `solana-anchor.md` | Anchor program development - macros, account types, CPIs, security |
-| `solana-pinocchio.md` | Pinocchio for high-performance programs - zero-copy, CU optimization |
-| `solana-frontend.md` | Frontend with @solana/client + @solana/react-hooks |
-| `solana-kit-web3-interop.md` | Kit ↔ web3.js boundary patterns and migration |
-| `solana-testing.md` | Testing with LiteSVM, Mollusk, and Surfpool |
-| `solana-idl-codegen.md` | IDL generation and client codegen with Codama |
-| `solana-payments.md` | Commerce Kit and payment flows |
-| `solana-security.md` | Security checklist for programs and clients |
-| `solana-resources.md` | Curated links to docs, tools, and learning resources |
 
 ### Web Development Skills
 
@@ -67,15 +50,14 @@ A comprehensive collection of Claude Code skills for building modern Solana full
 Starting a new project? Use the **[PROJECT_KICKOFF.md](PROJECT_KICKOFF.md)** questionnaire to help Claude understand what you're building. It covers:
 
 - Project type and target users
-- Solana program requirements (Anchor vs Pinocchio)
 - Frontend stack (Next.js, Tailwind, UI components)
-- Authentication and wallet connection
+- Authentication approach
 - Database and API architecture
 - Deployment and infrastructure
 
 **Quick start prompt:**
 ```
-I want to build a new Solana web app. Please ask me the project kickoff questions to understand what I'm building, then help me set up the project structure.
+I want to build a new web app. Please ask me the project kickoff questions to understand what I'm building, then help me set up the project structure.
 ```
 
 ## Installation
@@ -102,8 +84,8 @@ Once the `.claude` folder is in your project, Claude Code will automatically pic
 Skills are automatically loaded based on context. You can also explicitly invoke them:
 
 ```
-Use the solana-dev skill
 Use the nextjs skill
+Use the prisma skill
 ```
 
 ### Commands
@@ -111,7 +93,7 @@ Use the nextjs skill
 Commands are invoked with a slash:
 
 ```
-/commit fix: resolve wallet connection issue
+/commit fix: resolve login issue
 /build
 /test frontend
 /dev backend
@@ -121,14 +103,6 @@ Commands are invoked with a slash:
 
 These skills are opinionated and prefer:
 
-### Solana
-- **Frontend**: `@solana/client` + `@solana/react-hooks` (framework-kit)
-- **SDK**: `@solana/kit` for all new code
-- **Legacy**: `@solana/web3-compat` at boundaries only
-- **Programs**: Anchor (default) or Pinocchio (performance)
-- **Testing**: LiteSVM/Mollusk (unit), Surfpool (integration)
-
-### Web
 - **Framework**: Next.js 15 with App Router
 - **Styling**: Tailwind CSS v4
 - **Database**: Prisma with PostgreSQL
@@ -157,4 +131,4 @@ MIT License - feel free to use, modify, and distribute.
 
 ## Credits
 
-Built with patterns from the Solana ecosystem and modern web development best practices.
+Built with modern web development best practices.

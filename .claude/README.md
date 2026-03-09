@@ -1,6 +1,6 @@
 # Claude Skills
 
-This folder contains Claude-specific skills, instructions, and configurations for Solana fullstack web app development.
+This folder contains Claude-specific skills, instructions, and configurations for fullstack web app development.
 
 ## Purpose
 

@@ -1,6 +1,6 @@
 # Project Kickoff Questionnaire
 
-Use this questionnaire with Claude Code to plan and set up your Solana fullstack web app. Copy the sections you need or use the full questionnaire.
+Use this questionnaire with Claude Code to plan and set up your fullstack web app. Copy the sections you need or use the full questionnaire.
 
 ---
 
@@ -9,7 +9,7 @@ Use this questionnaire with Claude Code to plan and set up your Solana fullstack
 Copy and paste this to Claude to get started:
 
 ```
-I want to build a new Solana web app. Please ask me the project kickoff questions to understand what I'm building, then help me set up the project structure and configuration.
+I want to build a new web app. Please ask me the project kickoff questions to understand what I'm building, then help me set up the project structure and configuration.
 ```
 
 ---
@@ -19,14 +19,13 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 ### 1. Project Overview
 
 **What are you building?**
-- [ ] DeFi app (swaps, lending, staking, etc.)
-- [ ] NFT marketplace or collection
-- [ ] Token launchpad or creator tools
-- [ ] DAO or governance platform
-- [ ] Gaming / GameFi
+- [ ] SaaS platform
+- [ ] E-commerce / marketplace
 - [ ] Social / community platform
-- [ ] Payment / commerce app
-- [ ] Portfolio tracker / analytics
+- [ ] Dashboard / analytics tool
+- [ ] Content management system
+- [ ] Portfolio / marketing site
+- [ ] Internal tool / admin panel
 - [ ] Other: _______________
 
 **Describe your project in 1-2 sentences:**
@@ -37,32 +36,7 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 ---
 
-### 2. Solana Program Requirements
-
-**Do you need custom on-chain programs?**
-- [ ] Yes, I need to write Solana programs
-- [ ] No, I'm only interacting with existing programs
-- [ ] Not sure yet
-
-**If yes, what does your program need to do?**
-> _Your answer here_
-
-**Program framework preference:**
-- [ ] Anchor (recommended for most projects - faster development, built-in security)
-- [ ] Pinocchio (for performance-critical programs - lower CU, smaller binary)
-- [ ] Native Rust (maximum control, no framework)
-- [ ] Not sure - help me decide
-
-**Will your program handle tokens?**
-- [ ] Yes, SPL Token (classic)
-- [ ] Yes, Token-2022 (with extensions like transfer fees, confidential transfers)
-- [ ] Yes, both
-- [ ] No tokens
-- [ ] Not sure
-
----
-
-### 3. Frontend Setup
+### 2. Frontend Setup
 
 **Framework:**
 - [ ] Next.js 15 (recommended - App Router, Server Components)
@@ -98,22 +72,16 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 ---
 
-### 4. Wallet & Authentication
+### 3. Authentication
 
-**Wallet connection approach:**
-- [ ] Wallet Standard only (recommended - modern, multi-wallet)
-- [ ] Specific wallets (Phantom, Solflare, etc.)
-- [ ] WalletConnect
-- [ ] Not sure
-
-**Additional authentication needed?**
-- [ ] No, wallet-only auth
-- [ ] Yes, email/password
-- [ ] Yes, social login (Google, Twitter, etc.)
-- [ ] Yes, passkeys/WebAuthn
+**Authentication approach:**
+- [ ] Email/password
+- [ ] Social login (Google, Twitter, etc.)
+- [ ] Passkeys/WebAuthn
 - [ ] Magic link / passwordless
+- [ ] No authentication needed
 
-**Auth provider (if needed):**
+**Auth provider:**
 - [ ] Supabase Auth (recommended)
 - [ ] NextAuth.js
 - [ ] Clerk
@@ -122,14 +90,14 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 ---
 
-### 5. Database & Backend
+### 4. Database & Backend
 
 **Do you need a database?**
 - [ ] Yes
-- [ ] No, on-chain data only
+- [ ] No
 - [ ] Not sure
 
-**If yes, what data needs to be stored off-chain?**
+**If yes, what data needs to be stored?**
 - [ ] User profiles / preferences
 - [ ] Transaction history / analytics
 - [ ] Content (posts, comments, etc.)
@@ -157,7 +125,7 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 ---
 
-### 6. API & Data Fetching
+### 5. API & Data Fetching
 
 **API approach:**
 - [ ] Server Actions (Next.js - recommended for simple cases)
@@ -167,25 +135,14 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 - [ ] Combination
 
 **External APIs you'll integrate:**
-- [ ] Jupiter (swaps)
-- [ ] Helius (RPC, webhooks, DAS)
-- [ ] Birdeye (price data)
-- [ ] Magic Eden (NFT data)
-- [ ] Tensor (NFT data)
-- [ ] CoinGecko / CoinMarketCap
+- [ ] Payment processor (Stripe, etc.)
+- [ ] Email service (Resend, SendGrid, etc.)
+- [ ] Analytics (PostHog, Mixpanel, etc.)
 - [ ] Other: _______________
-
-**RPC provider:**
-- [ ] Helius (recommended)
-- [ ] QuickNode
-- [ ] Triton
-- [ ] Alchemy
-- [ ] Public RPC (devnet only)
-- [ ] Self-hosted
 
 ---
 
-### 7. File Storage
+### 6. File Storage
 
 **Do you need file/media storage?**
 - [ ] Yes
@@ -194,7 +151,6 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 **If yes, what types?**
 - [ ] Images (avatars, thumbnails)
-- [ ] NFT metadata / assets
 - [ ] Documents
 - [ ] Large files / videos
 
@@ -202,13 +158,12 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 - [ ] Supabase Storage (recommended if using Supabase)
 - [ ] AWS S3
 - [ ] Cloudflare R2
-- [ ] IPFS / Arweave (for permanent/decentralized)
 - [ ] Uploadthing
 - [ ] Other: _______________
 
 ---
 
-### 8. Deployment & Infrastructure
+### 7. Deployment & Infrastructure
 
 **Deployment target:**
 - [ ] Vercel (recommended for Next.js)
@@ -220,23 +175,22 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 **Environment needs:**
 - [ ] Development (local)
-- [ ] Staging (devnet)
-- [ ] Production (mainnet)
+- [ ] Staging
+- [ ] Production
 
 **Do you need background jobs/workers?**
-- [ ] Yes (indexing, notifications, etc.)
+- [ ] Yes (notifications, processing, etc.)
 - [ ] No
 - [ ] Not sure
 
 ---
 
-### 9. Testing Requirements
+### 8. Testing Requirements
 
 **Testing approach:**
 - [ ] Unit tests (Vitest/Jest)
 - [ ] Integration tests
 - [ ] E2E tests (Playwright/Cypress)
-- [ ] Program tests (LiteSVM/Mollusk)
 - [ ] Minimal/manual testing only
 
 **CI/CD:**
@@ -246,24 +200,23 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 ---
 
-### 10. Project Structure
+### 9. Project Structure
 
 **Monorepo or single app?**
-- [ ] Monorepo (recommended for program + frontend + shared packages)
+- [ ] Monorepo (recommended for frontend + backend + shared packages)
 - [ ] Single app (frontend only)
 - [ ] Not sure
 
 **If monorepo, what packages?**
 - [ ] Frontend (Next.js)
 - [ ] Backend API
-- [ ] Solana programs
 - [ ] Shared types/utils
 - [ ] Marketing site
 - [ ] Mobile app
 
 ---
 
-### 11. Timeline & Priorities
+### 10. Timeline & Priorities
 
 **What's the priority order?**
 1. _______________
@@ -278,13 +231,13 @@ I want to build a new Solana web app. Please ask me the project kickoff question
 
 ---
 
-### 12. Existing Code & Constraints
+### 11. Existing Code & Constraints
 
 **Starting from:**
 - [ ] Scratch (new project)
 - [ ] Existing codebase (need to integrate)
 - [ ] Fork of another project
-- [ ] Template (create-solana-dapp, etc.)
+- [ ] Template
 
 **Any technical constraints?**
 > _Your answer here_
@@ -304,8 +257,7 @@ Once you've filled this out, Claude can help you:
 2. **Configure tooling** - Set up TypeScript, ESLint, Prettier, etc.
 3. **Set up database schema** - Design your Prisma/Supabase schema
 4. **Create component library** - Set up shadcn/ui with your theme
-5. **Configure Solana** - Set up wallet connection, RPC, program clients
-6. **Plan the build** - Break down into tasks and milestones
+5. **Plan the build** - Break down into tasks and milestones
 
 ---
 
@@ -314,16 +266,14 @@ Once you've filled this out, Claude can help you:
 ```
 I filled out the project kickoff questionnaire:
 
-**Building:** NFT marketplace for music artists
-**Target user:** Independent musicians who want to sell music NFTs
-**Programs:** Yes, need custom marketplace program
-**Framework preference:** Anchor
+**Building:** SaaS dashboard for team project management
+**Target user:** Small teams who want a simple project tracker
 **Frontend:** Next.js 15, Tailwind, shadcn/ui, dark mode
-**Auth:** Wallet-only
-**Database:** Supabase for user profiles and listings cache
-**Storage:** Supabase Storage + Arweave for NFT assets
+**Auth:** Email/password + Google login via Supabase Auth
+**Database:** Supabase for user profiles and project data
+**Storage:** Supabase Storage for file attachments
 **Deploy:** Vercel
-**Priority:** 1) Minting flow 2) Marketplace listings 3) Artist profiles
+**Priority:** 1) Auth flow 2) Project CRUD 3) Team invites
 
 Please help me set up the project structure and create the initial configuration files.
 ```
